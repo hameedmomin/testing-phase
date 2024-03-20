@@ -1,0 +1,9 @@
+---
+- name: Check connection to remote host
+  hosts: '{{ HOSTS }}'
+  gather_facts: false
+  vars:
+    - HOSTS
+  tasks:
+    - name: Ping remote host
+      ping:
