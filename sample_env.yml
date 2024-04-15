@@ -13,9 +13,9 @@
   tasks:
     - name: Display my_var1
       debug:
-        msg: "my_var1 is {{ Username }}"
+        msg: "my_var1 is {{ ansible_user }}"
 
     - name: Display my_var2
       debug:
-        msg: "my_var2 is {{ Password }}"
+        msg: "my_var2 is {{ ansible_password }}"
 
