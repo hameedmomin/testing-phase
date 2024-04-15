@@ -1,8 +1,21 @@
+# ---
+# - hosts: all
+#   vars:
+#     my_env_var: "{{ lookup('ansible.builtin.env', 'hameed') }}"
+#   tasks:
+#     - name: Print the environment variable value
+#       debug:
+#         msg: "The value of MY_VAR is: {{ my_env_var }}"
 ---
-- hosts: all
-  vars:
-    my_env_var: "{{ lookup('ansible.builtin.env', 'hameed') }}"
+- name: Display Variables
+  hosts: localhost
+  gather_facts: false
   tasks:
-    - name: Print the environment variable value
+    - name: Display my_var1
       debug:
-        msg: "The value of MY_VAR is: {{ my_env_var }}"
+        msg: "my_var1 is {{ Username }}"
+
+    - name: Display my_var2
+      debug:
+        msg: "my_var2 is {{ Password }}"
+
