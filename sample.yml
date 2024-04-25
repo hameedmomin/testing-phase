@@ -1,0 +1,8 @@
+---
+- hosts: all
+  vars:
+    my_env_var: "{{ lookup('ansible.builtin.env', 'hameed') }}"
+  tasks:
+    - name: Print the environment variable value
+      debug:
+        msg: "The value of MY_VAR is: {{ my_env_var }}"
